@@ -1,0 +1,38 @@
+cari goggle colab fuzzy logic dan eksekusi pada nilai input tertentu dan jelaskan prosesnya dari input itu menjadi himpunan fuzzy berapa, rulesnya apa, dan outputnya apa
+
+
+ada kelompok temperatur dan humadity
+
+untuk kelompok temperatur terdiri dari:
+coldest : 0,4,6,8
+cold : 6,10,12,16
+warm : 12,16,18,24
+hot : 18,22,24,32
+hottest : 24,28,30,40
+
+untuk kelompok humadity terdiri dari :
+low : 0,15
+optimal : 50,15
+high : 100,15
+
+
+# Rules untuk warming up
+jika
+1. temperatur coldest dan humadity low
+2. temperatur coldest dan humadity optimal
+3. temperatur coldest dan humadity high
+4. temperatur cold dan humadity low
+5. temperatur cold dan humadity optimal
+6. temperatur warm dan humadity low
+
+# Rules untuk cooling up
+1. temperatur warm dan humadity high
+2. temperatur warm dan humadity optimal
+3. temperatur hot dan humadity high
+4. temperatur hot dan humadity optimal
+5. temperatur hottest dan humadity optimal
+6. temperatur hottest dan humadity low
+7. temperatur hottest dan humadity high
+
+dan output dari kodingan ini berupa perintah dengan perintah akan di dinginkan apabila bernilai 15,17,20
+dan akan dipanaskan apabila bernilai 18,20,26
